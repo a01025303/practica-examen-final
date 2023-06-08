@@ -69,15 +69,12 @@ jobs:
 
           - name: Package Application
             run: |
-                mkdir package
-                pip install -r AnaPaula/app/requirements.txt -t package
-                cp -r AnaPaula/app/* package/
-                cd package
-                zip -r ../my_flask_app.zip .
+                zip -r new_package.zip . -i AnaPaula/app/
+          
           - name: Check Zip File
             run: |
                 ls ../
-                unzip -l ../my_flask_app.zip
+                unzip -l ../my_flask_app
 
     # dockerize:
     #     needs: package
