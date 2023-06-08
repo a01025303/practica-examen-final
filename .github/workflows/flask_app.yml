@@ -51,7 +51,6 @@ jobs:
 
           - name: Test with pytest
             run: |
-              RUN_ENV=dev 
               coverage run -m pytest AnaPaula/app/src/
               coverage report
               coverage html -d cc_report/
