@@ -31,8 +31,7 @@ jobs:
               flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     test: 
-
-        #needs: build
+        needs: build
         runs-on: ubuntu-latest
 
         steps:
@@ -56,7 +55,7 @@ jobs:
               coverage html -d cc_report/
 
     package:
-        #needs: test
+        needs: test
         runs-on: ubuntu-latest
 
         steps:
@@ -76,7 +75,7 @@ jobs:
                 unzip new_package.zip
 
     dockerize:
-        #needs: package
+        needs: package
         runs-on: ubuntu-latest
 
         steps:
