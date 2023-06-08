@@ -51,7 +51,7 @@ jobs:
 
           - name: Test with pytest
             run: |
-              coverage run -m pytest AnaPaula/app/src/
+              coverage run -m pytest AnaPaula/app/src/test.py
               coverage report
               coverage html -d cc_report/
 
