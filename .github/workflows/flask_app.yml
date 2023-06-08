@@ -106,7 +106,7 @@ jobs:
               ECR_REPOSITORY: akemi-test-test
               IMAGE_TAG: latest-apkz
             with:
-              context: ./app
+              context: ./AnaPaula/app
               tags: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
               outputs: type=docker,dest=/tmp/${{ env.IMAGE_TAG }}.tar
                      
