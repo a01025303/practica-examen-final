@@ -73,8 +73,7 @@ jobs:
           
           - name: Check Zip File
             run: |
-                ls ../
-                unzip -l ../new_package.zip
+                unzip new_package.zip
 
     # dockerize:
     #     needs: package
