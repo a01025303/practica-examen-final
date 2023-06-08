@@ -56,7 +56,7 @@ jobs:
               coverage html -d cc_report/
 
     package:
-        needs: test
+        #needs: test
         runs-on: ubuntu-latest
 
         steps:
@@ -74,7 +74,7 @@ jobs:
           - name: Check Zip File
             run: |
                 ls ../
-                unzip -l ../my_flask_app
+                unzip -l ../new_package.zip
 
     # dockerize:
     #     needs: package
